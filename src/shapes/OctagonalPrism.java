@@ -1,6 +1,6 @@
 package shapes;
 
-public class OctagonalPrism
+public class OctagonalPrism extends Prism
 {
 
 }
