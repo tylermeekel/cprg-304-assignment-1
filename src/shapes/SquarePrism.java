@@ -9,7 +9,12 @@ public class SquarePrism extends Prism
 
     @Override
     public double calcBaseArea() {
-        return getSide() * getHeight();
+        return Math.pow(getSide(), 2);
     }
 
+    @Override
+    public double calcVolume() {
+        return calcBaseArea() * getHeight();
+    }
+    
 }
