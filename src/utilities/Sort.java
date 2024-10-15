@@ -1,6 +1,5 @@
 package utilities;
 
-import java.util.Comparator;
 
 public class Sort {
 	/// will sort by height
