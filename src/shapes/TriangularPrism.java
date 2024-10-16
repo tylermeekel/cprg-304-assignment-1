@@ -11,10 +11,11 @@ public class TriangularPrism extends Prism
     public double calcBaseArea() {
         return (Math.pow(getSide(), 2) * Math.sqrt(3))/4;
     }
-
     @Override
-    public double calcVolume() {
-        return calcBaseArea() * getHeight();
+    public String toString() {
+        return "TriangularPrism with height: " + getHeight() + " and edge length: " + getSide();
     }
+
+
 
 }

@@ -13,9 +13,7 @@ public class PentagonalPrism extends Prism
     }
 
     @Override
-    public double calcVolume() {
-        return calcBaseArea() * getHeight();
+    public String toString() {
+        return "PentagonalPrism with height: " + getHeight() + " and edge length: " + getSide();
     }
-
-
 }

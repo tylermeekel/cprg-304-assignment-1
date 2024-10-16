@@ -12,9 +12,12 @@ public class SquarePrism extends Prism
         return Math.pow(getSide(), 2);
     }
 
+    
+
     @Override
-    public double calcVolume() {
-        return calcBaseArea() * getHeight();
+    public String toString() {
+        return "SquarePrism with height: " + getHeight() + " and edge length: " + getSide();
     }
+
     
 }
