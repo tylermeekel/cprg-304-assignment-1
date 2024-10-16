@@ -7,22 +7,22 @@ public class Sort {
 	public static <T extends Comparable<? super T>> void bubblesort(T[] array) {
 		
 		int n = array.length;
-		for (int i = 0; i < n - 1; i++) {
-			
-			int min_idx = i;
-			
-			for (int j = i + 1; j < n; j++) {
-				if (array[j].compareTo(array[min_idx]) < 0) {
-					min_idx =j;
-				}
-			}
-		}
-		
-		// if(min_idx != i) {
-		// 	T temp = array[i];
-		// 	array[i] = array[min_idx];
-		// 	array[min_idx] = temp;
-		// }
+        boolean swapped;
+
+        for (int i = 0; i < n - 1; i++) {
+            swapped = false;
+
+            for (int j = 0; j < n - 1 - i; j++) {
+                if(array[j].compareTo(array[j + 1]) < 0) {
+                    T temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+        }
+    
+
 	}
 	public static <T extends Comparable<? super T>> void insertionSort(T[] array) {
 		int n = array.length;
@@ -55,7 +55,7 @@ public class Sort {
 	}
 	
 	
-public static <T extends Comparable<? super T>>void mergesort(T arr[], int l, int r){
+    public static <T extends Comparable<? super T>>void mergesort(T arr[], int l, int r){
 		sort(arr, 0, arr.length);
 	}
 	
@@ -64,5 +64,7 @@ public static <T extends Comparable<? super T>>void mergesort(T arr[], int l, in
 		
 	}
 }
+
+
 
 
