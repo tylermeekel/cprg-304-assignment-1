@@ -58,22 +58,22 @@ public class Sort {
 	}
 	
 	
-	public static void mergeSort(Shape[] array){
-		Shape[] newArray = mergeSortRecursive(array);
+	public static  <T extends Comparable<? super T>> void mergeSort(T[] array){
+		T[] newArray = mergeSortRecursive(array);
 		for (int i = 0; i < array.length; i++) {
 			array[i] = newArray[i];
 		}
 	}
 	
-	private static Shape[] mergeSortRecursive(Shape[] array) {
+	private static <T extends Comparable<? super T>> T[] mergeSortRecursive(T[] array) {
 		int n = array.length;
 		
 		if (n <= 1) {
 			return array;
 		}
 		
-		Shape[] arrayOne = Arrays.copyOfRange(array, 0, n/2);
-		Shape[] arrayTwo = Arrays.copyOfRange(array, n/2, n);
+		T[] arrayOne = Arrays.copyOfRange(array, 0, n/2);
+		T[] arrayTwo = Arrays.copyOfRange(array, n/2, n);
 		
 		arrayOne = mergeSortRecursive(arrayOne);
 		arrayTwo = mergeSortRecursive(arrayTwo);
@@ -81,9 +81,9 @@ public class Sort {
 		return merge(arrayOne, arrayTwo);
 	}
 	
-	private static Shape[] merge(Shape[] arrayA, Shape[] arrayB) {
+	private static <T extends Comparable<? super T>> T[] merge(T[] arrayA, T[] arrayB) {
 		int totalLength = arrayA.length + arrayB.length;
-		Shape[] arrayC = new Shape[totalLength];
+		T[] arrayC = (T[]) new Object[totalLength];
 		
 		int indexA = 0;
 		int indexB = 0;
@@ -118,21 +118,21 @@ public class Sort {
 		return arrayC;
 	}
 	
-	public static void bogoSort(Shape[] array) {
+	public static <T extends Comparable<? super T>> void bogoSort(T[] array) {
 		Random rand = new Random();
 		
 		// if not sorted, randomize array
 		while(!checkIfSorted(array)) {
 			for (int i = 0; i < array.length; i++) {
 				int swapIndex = rand.nextInt(array.length);
-				Shape tempValue = array[swapIndex];
+				T tempValue = array[swapIndex];
 				array[swapIndex] = array[i];
 				array[i] = tempValue;
 			}
 		}
 	}
 	
-	private static boolean checkIfSorted(Shape[] array) {
+	private static <T extends Comparable<? super T>> boolean checkIfSorted(T[] array) {
 		for(int i = 0; i < array.length - 1; i++) {
 			if(array[i].compareTo(array[i + 1]) > 0) {
 				return false;
