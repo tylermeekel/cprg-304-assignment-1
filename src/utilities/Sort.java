@@ -7,8 +7,7 @@ import shapes.Shape;
 
 public class Sort {
 	/// will sort by height
-	public static void bubbleSort(Shape[] array) {
-		
+	public static <T extends Comparable<? super T>> void bubbleSort(T[] array){		
 		int n = array.length;
         boolean swapped;
 
@@ -17,7 +16,7 @@ public class Sort {
 
             for (int j = 0; j < n - 1 - i; j++) {
                 if(array[j].compareTo(array[j + 1]) < 0) {
-                    Shape temp = array[j];
+                    T temp = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
                     swapped = true;
@@ -30,10 +29,10 @@ public class Sort {
         
 	}
 	
-	public static void insertionSort(Shape[] array) {
+	public static <T extends Comparable<? super T>> void insertionSort(T[] array) {
 		int n = array.length;
 		for (int i = 1; i < n; i++) {
-			Shape key = array[i];
+			T key = array[i];
 			int j = i - 1;
 	
 			while (j >= 0 && array[j].compareTo(key) > 0) {
@@ -45,7 +44,7 @@ public class Sort {
 		}
 	}
 
-	public static void selectionSort(Shape[] array) {
+	public static <T extends Comparable<? super T>> void selectionSort(T[] array) {
 		int n = array.length;
 		for (int i = 0; i < n - 1; i++) {
 			int minIndex = i; 
@@ -54,7 +53,7 @@ public class Sort {
 					minIndex = j;
 				}
 			}
-			Shape temp = array[minIndex];
+			T temp = array[minIndex];
 			array[minIndex] = array[i];
 			array[i] = temp;
 		}
