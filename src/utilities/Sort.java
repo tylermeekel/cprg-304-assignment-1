@@ -29,38 +29,7 @@ public class Sort {
         }
         
 	}
-	public static <T extends Comparable<? super T>> void insertionSort(T[] array) {
-		int n = array.length;
-		for (int i = 1; i < n; i++) {
-			T key = array[i];
-			int j = i - 1;
 	
-			while (j >= 0 && array[j].compareTo(key) > 0) {
-				array[j + 1] = array[j];
-				j--;
-			}
-	
-			array[j + 1] = key;
-		}
-	}
-
-	public static <T extends Comparable<? super T>> void selectionSort(T[] array) {
-		int n = array.length;
-		for (int i = 0; i < n - 1; i++) {
-			int minIndex = i; 
-			for (int j = i + 1; j < n; j++) {
-				if (array[j].compareTo(array[minIndex]) < 0) {
-					minIndex = j;
-				}
-			}
-		}
-		
-		// if(min_idx != i) {
-		// 	T temp = array[i];
-		// 	array[i] = array[min_idx];
-		// 	array[min_idx] = temp;
-		// }
-	}
 	public static <T extends Comparable<? super T>> void insertionSort(T[] array) {
 		int n = array.length;
 		for (int i = 1; i < n; i++) {
