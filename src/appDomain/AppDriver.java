@@ -1,5 +1,12 @@
 package appDomain;
 
+import java.util.Arrays;
+
+import shapes.Shape;
+import utilities.BaseAreaComparator;
+import utilities.Sort;
+import utilities.VolumeComparator;
+
 public class AppDriver
 {
 
@@ -19,14 +26,9 @@ public class AppDriver
 		// refer to demo02 KittySort.java on how to use a custom sorting
 		// algorithm on a list of comparables to sort using either the
 		// natural order (comparable) or other orders (comparators)
-		
-
-
-
-
 
         // Example usage: java -jar Sort.jar -fshapes1.txt -t v -s b
-        String fileName = "res/shapes1.txt";
+        String fileName = "";
         String sortBy = "";  // v for volume, h for height, a for base area
         String sortAlgorithm = "";  // b for bubble, s for selection, etc.
         
@@ -59,22 +61,22 @@ public class AppDriver
         // Choose the sorting algorithm
         switch (sortAlgorithm) {
             case "b":  // Bubble sort
-                BubbleSort.sort(shapes);
+                Sort.bubbleSort(shapes);
                 break;
             case "s":  // Selection sort
-                SelectionSort.sort(shapes);
+				Sort.selectionSort(shapes);
                 break;
             case "i":  // Insertion sort
-                InsertionSort.sort(shapes);
+				Sort.insertionSort(shapes);
                 break;
             case "m":  // Merge sort
-                MergeSort.sort(shapes);
+				Sort.mergeSort(shapes);
                 break;
             case "q":  // Quick sort
-                QuickSort.sort(shapes);
+				Sort.quickSort(shapes);
                 break;
-            case "z":  // Custom algorithm (e.g., Heap Sort)
-                HeapSort.sort(shapes);
+            case "z":  // Custom algorithm
+				Sort.bogoSort(shapes);
                 break;
             default:
                 System.out.println("Unknown sorting algorithm specified.");
