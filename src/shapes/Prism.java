@@ -20,7 +20,7 @@ public abstract class Prism extends Shape {
 	 * @return the side
 	 */
 	public double getSide() {
-		return side;
+		return this.side;
 	}
 
 

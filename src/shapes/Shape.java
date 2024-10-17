@@ -8,10 +8,10 @@ public abstract class Shape implements Comparable<Shape>{
 	
 
 /// create shape object with specified height.
-
 	public double getHeight() {
-		return height;
+		return this.height;
 	}
+	
 	public void setHeight(double height) {
 		this.height = height;
 	}

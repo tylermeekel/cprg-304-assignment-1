@@ -11,10 +11,4 @@ public class SquarePrism extends Prism
     public double calcBaseArea() {
         return Math.pow(getSide(), 2);
     }
-
-    @Override
-    public double calcVolume() {
-        return calcBaseArea() * getHeight();
-    }
-    
 }

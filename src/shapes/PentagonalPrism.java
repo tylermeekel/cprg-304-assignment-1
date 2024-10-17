@@ -12,10 +12,4 @@ public class PentagonalPrism extends Prism
         return (5 * Math.pow(getSide(), 2) * Math.tan(Math.toRadians(54))) / 4;
     }
 
-    @Override
-    public double calcVolume() {
-        return calcBaseArea() * getHeight();
-    }
-
-
 }
