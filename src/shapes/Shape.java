@@ -1,13 +1,14 @@
 package shapes;
 
 public abstract class Shape implements Comparable<Shape>{
+	
 	private double height;
     public abstract double calcBaseArea();
 	public abstract double calcVolume();
 	
 	
 
-/// create shape object with specified height.
+	// create shape object with specified height.
 	public double getHeight() {
 		return this.height;
 	}

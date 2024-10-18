@@ -1,6 +1,11 @@
 package shapes;
 
 public abstract class Prism extends Shape {
+	/**
+	 * Creates a cone with the specified height and radius
+	 * @param height
+	 * @param edgeLength
+	 */
 	private double edgeLength;
 	
 

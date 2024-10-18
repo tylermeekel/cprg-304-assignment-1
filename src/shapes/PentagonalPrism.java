@@ -2,6 +2,11 @@ package shapes;
 
 public class PentagonalPrism extends Prism
 {
+    /**
+	 * Creates a cone with the specified height and radius
+	 * @param height
+	 * @param edgeLength
+	 */
 
     public PentagonalPrism(double height, double edgeLength) {
         super(height, edgeLength);

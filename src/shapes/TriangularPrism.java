@@ -2,7 +2,11 @@ package shapes;
 
 public class TriangularPrism extends Prism
 {
-
+    /**
+	 * Creates a cone with the specified height and radius
+	 * @param height
+	 * @param edgeLength
+	 */
 
     public TriangularPrism(double height, double edgeLength) {
         super(height, edgeLength);
