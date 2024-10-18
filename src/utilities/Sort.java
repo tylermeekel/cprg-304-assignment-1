@@ -144,9 +144,35 @@ public class Sort {
 		return true;
 	}
 	
-	public static void quickSort(Shape[] array) {
-		
-	}
+	public static <T extends Comparable<? super T>> void quickSort(T[] array, int low, int high) {
+		if (low < high) {
+			// Find the partition index
+			int pi = partition(array, low, high);
+			// Recursively sort elements before and after partition
+			quickSort(array, low, pi - 1);
+			quickSort(array, pi + 1, high);
+		}
+	 }
+	 private static <T extends Comparable<? super T>> int partition(T[] array, int low, int high) {
+		// Choose the rightmost element as the pivot
+		T pivot = array[high];
+		int i = (low - 1); // Index of the smaller element
+		for (int j = low; j < high; j++) {
+			// If current element is smaller than or equal to pivot
+			if (array[j].compareTo(pivot) <= 0) {
+				i++;
+				// Swap arr[i] and arr[j]
+				T temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+		}
+		// Swap arr[i + 1] and the pivot (arr[high])
+		T temp = array[i + 1];
+		array[i + 1] = array[high];
+		array[high] = temp;
+		return i + 1; // Return the partition index
+	 }
 }
 
 
