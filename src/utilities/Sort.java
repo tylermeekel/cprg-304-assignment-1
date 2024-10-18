@@ -3,8 +3,6 @@ package utilities;
 import java.util.Arrays;
 import java.util.Random;
 
-import shapes.Shape;
-
 public class Sort {
 	/// will sort by height
 	public static <T extends Comparable<? super T>> void bubbleSort(T[] array){		
