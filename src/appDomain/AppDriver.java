@@ -89,9 +89,11 @@ public class AppDriver {
                         Sort.bubbleSort(shapes);
                         endTime = System.currentTimeMillis();
                 }
-                
                 System.out.println("Sorting time: " + (endTime - startTime) + " milliseconds");
             }
+            for (Shape shape : shapes) {
+                System.out.println(shape);
+            }    
         }
     }
 
