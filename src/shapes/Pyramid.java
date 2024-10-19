@@ -21,4 +21,7 @@ public class Pyramid extends Shape {
     public double calcVolume() {
         return (calcBaseArea() * getHeight()) / 3;
     }
+    public String getShapeName() {
+        return "Pyramid";
+    }
 }

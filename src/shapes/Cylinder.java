@@ -28,6 +28,9 @@ public class Cylinder extends Shape {
 
 	@Override
 	public double calcVolume() {
-		return this.calcBaseArea() * this.getHeight();
+				return this.calcBaseArea() * this.getHeight();
 	}
+	public String getShapeName() {
+        return "Cylinder";
+    }
 }

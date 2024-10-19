@@ -41,7 +41,4 @@ public abstract class Prism extends Shape {
 	public double calcVolume() {
 		return calcBaseArea() * getHeight();
 	}
-
-
-
 }

@@ -16,4 +16,7 @@ public class SquarePrism extends Prism
     public double calcBaseArea() {
         return Math.pow(getEdgeLength(), 2);
     }
+    public String getShapeName() {
+        return "SquarePrism";
+    }
 }

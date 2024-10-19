@@ -15,5 +15,8 @@ public class TriangularPrism extends Prism
     public double calcBaseArea() {
         return (Math.pow(getEdgeLength(), 2) * Math.sqrt(3))/4;
     }
+    public String getShapeName() {
+        return "TriangularPrism";
+    }
     
 }
