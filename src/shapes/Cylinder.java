@@ -28,7 +28,6 @@ public class Cylinder extends Shape {
 
 	@Override
 	public double calcVolume() {
-		// TODO Auto-generated method stub
 		return this.calcBaseArea() * this.getHeight();
 	}
 }

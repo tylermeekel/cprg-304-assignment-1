@@ -34,9 +34,7 @@ public abstract class Prism extends Shape {
 
 
 	@Override
-	public double calcBaseArea() {
-		return 0;
-	}
+    public abstract double calcBaseArea();
 
 
 	@Override

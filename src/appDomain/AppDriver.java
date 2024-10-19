@@ -48,7 +48,7 @@ public class AppDriver {
                         Arrays.sort(shapes, new VolumeComparator());
                 }
             }
-            if (argsInput[2].startsWith("-s") && argsInput[1].charAt(2) == 'h') {
+            if (argsInput.length > 2 && argsInput[2].startsWith("-s") && argsInput[1].charAt(2) == 'h') {
                 char sortType = argsInput[2].charAt(2);
                 long startTime, endTime;
                 
