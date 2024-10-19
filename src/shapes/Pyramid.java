@@ -1,24 +1,27 @@
 package shapes;
 
 public class Pyramid extends Shape {
-    private double sideLength;
-    public Pyramid(double height, double sideLength) {
+    /**
+	 * Creates a cone with the specified height and radius
+	 * @param height
+	 * @param edgeLength
+	 */
+    private double edgeLength;
+    public Pyramid(double height, double edgeLength) {
         super(height);
-        this.sideLength = sideLength;
+        this.edgeLength = edgeLength;
     }
 
     @Override
     public double calcBaseArea() {
-        return Math.pow(sideLength, 2);
+        return Math.pow(edgeLength, 2);
     }
 
     @Override
     public double calcVolume() {
         return (calcBaseArea() * getHeight()) / 3;
     }
-
-    @Override
-    public String toString() {
-        return "Pyramid with height " + getHeight() + " and base side length " + sideLength;
+    public String getShapeName() {
+        return "Pyramid";
     }
 }

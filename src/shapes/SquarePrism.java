@@ -2,19 +2,21 @@ package shapes;
 
 public class SquarePrism extends Prism
 {
+    /**
+	 * Creates a cone with the specified height and radius
+	 * @param height
+	 * @param edgeLength
+	 */
 
-    public SquarePrism(double height, double side) {
-        super(height, side);
+    public SquarePrism(double height, double edgeLength) {
+        super(height, edgeLength);
     }
 
     @Override
     public double calcBaseArea() {
-        return Math.pow(getSide(), 2);
+        return Math.pow(getEdgeLength(), 2);
     }
-
-    @Override
-    public double calcVolume() {
-        return calcBaseArea() * getHeight();
+    public String getShapeName() {
+        return "SquarePrism";
     }
-    
 }
