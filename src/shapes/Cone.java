@@ -28,6 +28,6 @@ public class Cone extends Shape {
 
 	@Override
 	public double calcVolume() {
-		return calcBaseArea() * (this.getHeight() / 3.0);
+		return this.calcBaseArea() * (this.getHeight() / 3.0);
 	}
 }

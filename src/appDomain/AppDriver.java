@@ -31,12 +31,16 @@ public class AppDriver {
             return;
         } else {
             Shape[] shapes = loadShapesFromFile(filePath);
-
+        
             if (argsInput[1].startsWith("-t")) {
                 char type = argsInput[1].charAt(2);
+
                 switch (type) {
                     case 'v':
                         Arrays.sort(shapes, new VolumeComparator());
+                        for (Shape shape : shapes) {
+                            System.out.println(shape);
+                        }    
                         break;
                     case 'h':
                         break;
@@ -46,6 +50,7 @@ public class AppDriver {
                     default:
                         System.out.println("Invalid type option. Defaulting to volume.");
                         Arrays.sort(shapes, new VolumeComparator());
+                        break;
                 }
             }
             if (argsInput.length > 2 && argsInput[2].startsWith("-s") && argsInput[1].charAt(2) == 'h') {
@@ -89,11 +94,11 @@ public class AppDriver {
                         Sort.bubbleSort(shapes);
                         endTime = System.currentTimeMillis();
                 }
-                System.out.println("Sorting time: " + (endTime - startTime) + " milliseconds");
+                if(argsInput.length > 2 && argsInput[2].startsWith("-s") && argsInput[1].charAt(2) == 'h'){
+                    System.out.println("Sorting time: " + (endTime - startTime) + " milliseconds");
+                }
             }
-            for (Shape shape : shapes) {
-                System.out.println(shape);
-            }    
+            
         }
     }
 

@@ -21,14 +21,4 @@ public class Pyramid extends Shape {
     public double calcVolume() {
         return (calcBaseArea() * getHeight()) / 3;
     }
-    @Override
-    public String toString() {
-        double baseArea = calcBaseArea();
-        double volume = calcVolume();
-        if (baseArea == 0){
-            return "The polygons.Pyramid has a volume of :" + volume;
-        }
-        else
-            return "The polygons.Pyramid has a BaseArea of :" + baseArea;
-    }
 }
