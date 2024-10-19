@@ -39,9 +39,9 @@ public abstract class Shape implements Comparable<Shape> {
             case "volume":
                 return "The polygons." + getShapeName() + " has a Volume of: " + calcVolume();
             case "height":
-				return "The polygons." + getShapeName() + " has a Volume of: " + calcBaseArea();
+				return "The polygons." + getShapeName() + " has a Height of: " + getHeight();
             case "baseArea":
-				return "The polygons." + getShapeName() + " has a Volume of: " + getHeight();
+				return "The polygons." + getShapeName() + " has a BaseArea of: " + calcBaseArea();
             default:
                 return getShapeName() + " (Height: " + getHeight() + ", Base Area: " + calcBaseArea() + ", Volume: " + calcVolume() + ")";
         }
